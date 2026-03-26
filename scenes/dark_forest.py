@@ -24,8 +24,8 @@ def dark_forest_scene():
     sleep(2.0)
 
     next_scene = choose_option([
-        ('take the path on the right', right_path_scene),
         ('go into the forest', entering_forest_scene),
+        ('take the path on the right', right_path_scene),
         ('stay on the same road', None)
     ])
 
@@ -33,15 +33,6 @@ def dark_forest_scene():
 
 # -----------------------------------------------
 
-def right_path_scene():
-    
-    sleep(1.0)
-    print(f"\nYes the forest looked a little bit scary")
-    sleep(1.0)
-    print("This is better")
-    sleep(2.0)
-    
-    return None
 
 def entering_forest_scene():
     
@@ -52,10 +43,10 @@ def entering_forest_scene():
     
     next_scene = choose_option([
         ('continue entering the forest', inside_forest_scene),
-        ('turn around', return right_path_scene)
+        ('turn around', right_path_scene)
     ])
     
-    return inside_forest_scene  
+    return next_scene  
 
 def inside_forest_scene():
     
@@ -71,3 +62,13 @@ def inside_forest_scene():
     print("how did I get here?")
 
     return entering_forest_scene
+
+def right_path_scene():
+    
+    sleep(1.0)
+    print(f"\nYes the forest looked a little bit scary")
+    sleep(1.0)
+    print("This is better")
+    sleep(2.0)
+    
+    return None
