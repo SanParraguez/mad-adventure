@@ -18,7 +18,7 @@ def gathering_berries_scene():
     sleep(2.0)
 
     next_scene = choose_option([
-        ('Gather them', continuation_scene),
+        ('Pick some and eat them', continuation_scene),
         ('Ignore them', None)
     ])
 
@@ -28,16 +28,16 @@ def gathering_berries_scene():
 
 def continuation_scene():
     
-    print(f"\nThey look a little too delicious...")
+    print(f"\nOh wow, so delicious!")
     sleep(2.0)
 
     chance_of_death = chance_roll(10) # 10 percent probability of death
     
     if chance_of_death:
         
-        print(f"\nI feel the urge to eat them")
+        print(f"\nI feel the urge to eat more")
         sleep(1.0)
-        print(f"\nOh wow they are so delicious")
+        print(f"\n...and more")
         sleep(1.0)
         print(f"\nI CAN'T STOP EATING")
 
