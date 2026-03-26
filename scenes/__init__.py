@@ -18,3 +18,4 @@ from . import forest_gnomes
 from . import very_cool_stick
 from . import fun_mushrooms
 from . import gethering_berries
+from . import fountain_scene
