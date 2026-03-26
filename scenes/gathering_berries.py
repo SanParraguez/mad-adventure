@@ -31,7 +31,7 @@ def continuation_scene():
     print(f"\nThey look a little too delicious...")
     sleep(2.0)
 
-    example_roll = chance_roll(50) # 50 percent probability
+    example_roll = chance_roll(10) # 50 percent probability
     
     if example_roll:
         
