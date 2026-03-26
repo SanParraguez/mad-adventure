@@ -11,17 +11,16 @@ from utils import sleep
 
 # ===== Scene =======================================================
 
-@register    # You need to register the entry scene of your arc (and add the module to the scenes.__init__.py file.
+@register
 def getting_late():
     
     print(f"\nThe sun has begun to set...")
     sleep(1.0)
     print(f"\nYou feel tired and start looking for a place to rest.")
 
-    # You can add options for the player to choose from like this:
     next_scene = choose_option([
         ('Look for a tree', tree_scene),
-        ('Look for a cave', cave_scene)                # If you want option 2 to exit this scene and continue the game
+        ('Look for a cave', cave_scene)
     ])
 
     return next_scene
@@ -33,7 +32,7 @@ def tree_scene():
     print(f"\nYou look for a suitably protected place within the forest...")
     sleep(1.0)
 
-    found_tree = chance_roll(25) # You can use a chance roll like this, where 25 is the probability of success
+    found_tree = chance_roll(25)
     
     if found_tree:
         
@@ -67,8 +66,8 @@ def cave_scene():
     print(f"\nAs you are about to enter, you hear a small noise by a tree.")
 
     next_scene = choose_option([
-        ('Check it out the noise', squirrel_scene), # If you want option 1 to lead to a continuation_scene
-        ('Ignore', monster_scene)                # If you want option 2 to exit this scene and continue the game
+        ('Check it out the noise', squirrel_scene),
+        ('Ignore', monster_scene)
     ])
 
     return next_scene
@@ -101,4 +100,4 @@ def squirrel_scene():
 
     print(f"\nFollowing the noise, you find a small, cute wounded squirrel")
 
-    return True # For now just to debug
+    return True # Temporary ending for draft version
