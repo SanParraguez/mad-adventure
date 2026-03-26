@@ -80,3 +80,25 @@ def cave_scene():
     ])
 
 	return next_scene
+
+# -----------------------------------------------
+
+def monster_scene():
+
+    print(f"\nYou feel safe within your warm bedroll.", ' ', flush=True)
+    sleep(1.0)
+    print(f".", ' ', flush=True)
+    sleep(1.0)
+    print(f".", ' ', flush=True)
+    sleep(2.0)
+    print(f"\nAs you're about to drift to sleep, you hear a strange noise.")
+    sleep(1.0)
+    print(f"\nYou open you eyes, yet it is still dark.")
+    sleep(1.0)
+    print(f"\nYour head is filled with questions, as you lose consciousness,", ' ', flush=True)
+    sleep(1.0)
+    print(f"wondering...", ' ', flush=True)
+    sleep(1.0)
+    print(f"\nWhat did I do wrong?")
+
+    return False
