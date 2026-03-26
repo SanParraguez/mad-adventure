@@ -18,7 +18,7 @@ def gathering_berries_scene():
     sleep(2.0)
 
     next_scene = choose_option([
-        ('Pick some and eat them', continuation_scene),
+        ('Pick some and eat them', eat_berries_scene),
         ('Ignore them', None)
     ])
 
@@ -26,7 +26,7 @@ def gathering_berries_scene():
 
 # -----------------------------------------------
 
-def continuation_scene():
+def eat_berries_scene():
     
     print(f"\nOh wow, so delicious!")
     sleep(2.0)
