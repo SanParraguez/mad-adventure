@@ -20,7 +20,7 @@ def getting_late():
 
     # You can add options for the player to choose from like this:
     next_scene = choose_option([
-        ('Look for a tree', tree_scene), # If you want option 1 to lead to a continuation_scene
+        ('Look for a tree', tree_scene),
         ('Look for a cave', cave_scene)                # If you want option 2 to exit this scene and continue the game
     ])
 
@@ -42,17 +42,15 @@ def tree_scene():
         print(f"\nAs you begin to make your bedroll, you hear a small noise...")
 
         next_scene = choose_option([
-            ('Investigate the sound', squirrel_scene)
+            ('Investigate the sound', squirrel_scene),
             ('Ignore the sound', monster_scene)
 	])
 
-        return next_scene
-    
     else:
 
         print(f"\nYou can't find a good place.")
         next_scene = choose_option([
-            ('Continue looking for a tree', monster_scene)
+            ('Continue looking for a tree', monster_scene),
 	    ('Switch to looking for a cave', cave_scene)
         ])
 
