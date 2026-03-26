@@ -18,4 +18,9 @@ from . import forest_gnomes
 from . import very_cool_stick
 from . import fun_mushrooms
 from . import gethering_berries
+from . import dark_forest
+from . import castle
+from . import dragon_footprints
+from . import scarf
+from . import gathering_berries
 from . import fountain_scene
