@@ -35,9 +35,7 @@ def found_snake():
     sleep(1.0)
     print(f"\nAAAAAAH! A SNAKE!!")
     sleep(2.0)
-    print(f"\nYou quickly kill, skin, cook and eat the snake.")
-    sleep(2.0)
-    print(f"I hope it was not poisonous...")
+    print(f"I hope it was not venomous... thankfully I managed to run away...")
     sleep(1.0)
 
     next_scene = None
