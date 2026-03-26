@@ -39,26 +39,22 @@ def tree_scene():
         
         print(f"\nYou find a small secluded grove.")
         sleep(1.0)
-	print(f"\nAs you begin to make your bedroll, you hear a small noise...")
+        print(f"\nAs you begin to make your bedroll, you hear a small noise...")
 
-	next_scene = choose_option([
- 		('Investigate the sound', squirrel_scene)
-		('Ignore the sound', monster_scene)
+        next_scene = choose_option([
+            ('Investigate the sound', squirrel_scene)
+            ('Ignore the sound', monster_scene)
 	])
 
         return next_scene
-        # When you are ready to end the scene, return:
-        #   None:  to continue the game
-        #   True:  to win the game
-        #   False: to lose the game
     
     else:
 
-	print(f"\nYou can't find a good place.")
-	next_scene = choose_option([
-		('Continue looking for a tree', monster_scene)
-		('Switch to looking for a cave', cave_scene)
-	])
+        print(f"\nYou can't find a good place.")
+        next_scene = choose_option([
+            ('Continue looking for a tree', monster_scene)
+	    ('Switch to looking for a cave', cave_scene)
+        ])
 
     return next_scene
 
@@ -70,7 +66,7 @@ def cave_scene():
     sleep(2.0)
     print(f"\nYou find the perfect looking cave.")
     sleep(1.0)
-    print(f"\nAs you are about to enter, you hear a small noise by a tree."
+    print(f"\nAs you are about to enter, you hear a small noise by a tree.")
 
     next_scene = choose_option([
         ('Check it out the noise', squirrel_scene), # If you want option 1 to lead to a continuation_scene
@@ -81,7 +77,7 @@ def cave_scene():
 
 # -----------------------------------------------
 
-def monster_scene():
+#def monster_scene():
 
     print(f"\nYou feel safe within your warm bedroll.", ' ', flush=True)
     sleep(1.0)
