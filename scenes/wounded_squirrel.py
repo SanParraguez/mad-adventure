@@ -82,7 +82,7 @@ def cave_scene():
         ('Ignore', monster_scene)                # If you want option 2 to exit this scene and continue the game
     ])
 
-	return next_scene
+    return next_scene
 
 # -----------------------------------------------
 
