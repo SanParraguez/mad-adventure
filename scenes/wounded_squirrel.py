@@ -46,7 +46,7 @@ def tree_scene():
         sleep(1.0)
 	print(f"\nAs you begin to make your bedroll, you hear a small noise...")
 
-	next_scene = found_squirrel
+	next_scene = squirrel_scene
 
         return next_scene
         # When you are ready to end the scene, return:
@@ -61,5 +61,22 @@ def tree_scene():
 		('Continue looking for a tree', monster_scene)
 		('Switch to looking for a cave', cave_scene)
 	])
+
+	return next_scene
+
+# -----------------------------------------------
+
+def cave_scene():
+    
+    print(f"\nYou look for a suitably protected cave...")
+    sleep(2.0)
+    print(f"\nYou find the perfect looking cave.")
+    sleep(1.0)
+    print(f"\nAs you are about to enter, you hear a small noise by a tree."
+
+    next_scene = choose_option([
+        ('Check it out the noise', squirrel_scene), # If you want option 1 to lead to a continuation_scene
+        ('Ignore', monster_scene)                # If you want option 2 to exit this scene and continue the game
+    ])
 
 	return next_scene
