@@ -31,9 +31,9 @@ def continuation_scene():
     print(f"\nThey look a little too delicious...")
     sleep(2.0)
 
-    example_roll = chance_roll(10) # 50 percent probability
+    chance_of_death = chance_roll(10) # 10 percent probability of death
     
-    if example_roll:
+    if chance_of_death:
         
         print(f"\nI feel the urge to eat them")
         sleep(1.0)
@@ -42,10 +42,6 @@ def continuation_scene():
         print(f"\nI CAN'T STOP EATING")
 
         return False
-        # When you are ready to end the scene, return:
-        #   None:  to continue the game
-        #   True:  to win the game
-        #   False: to lose the game
     
     else:
 
