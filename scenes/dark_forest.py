@@ -60,6 +60,9 @@ def inside_forest_scene():
     print("Wait... ", end=' ', flush=True)
     sleep(2.0)
     print("how did I get here?")
+    sleep(2.0)
+    print("Oh, a forest! Let's go in")
+    sleep(2.0)
 
     return entering_forest_scene
 
