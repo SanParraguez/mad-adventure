@@ -77,7 +77,7 @@ def cave_scene():
 
 # -----------------------------------------------
 
-#def monster_scene():
+def monster_scene():
 
     print(f"\nYou feel safe within your warm bedroll.", ' ', flush=True)
     sleep(1.0)
