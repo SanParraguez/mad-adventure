@@ -19,9 +19,12 @@ from scenes.wake_up import wake_up_scene
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--debug", action="store_true")
+parser.add_argument("--lives", type=int)
 args = parser.parse_args()
 
 settings.DEBUG = args.debug
+if args.lives is not None:
+    settings.LIVES = args.lives
 
 
 # === Game loop =====================================================
@@ -39,6 +42,7 @@ def main():
     # Loop over scenes
     counter = 0
     while counter < max_scenes:
+        print(settings.LIVES)
 
         current_scene = current_scene()
 
@@ -63,8 +67,13 @@ def main():
             break
 
         elif current_scene is False:
-            print(f"\nYou lost, maybe next time.")
-            break
+            if settings.LIVES == 0:
+                print(f"\nYou lost, maybe next time.")
+                break
+            else:
+                print(f"\nLet's give it one more try...")
+                settings.LIVES -= 1
+
 
     sleep(1.0)
     print("\n=====  The End  =====")

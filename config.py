@@ -12,6 +12,7 @@ Provides a configuration class
 
 class Settings:
     DEBUG = False
+    LIVES = 5
 
 
 # Initialize settings
