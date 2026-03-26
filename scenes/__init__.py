@@ -17,5 +17,7 @@ from . import flower_seller
 from . import forest_gnomes
 from . import very_cool_stick
 from . import fun_mushrooms
+from . import lake_swimming
 from . import gathering_berries
 from . import fountain_scene
+
