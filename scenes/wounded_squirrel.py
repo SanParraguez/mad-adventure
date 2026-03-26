@@ -17,11 +17,6 @@ def getting_late():
     print(f"\nThe sun has begun to set...")
     sleep(1.0)
     print(f"\nYou feel tired and start looking for a place to rest.")
-#    sleep(2.0) # Add some suspense by adding breaks between text (this would add a 2 seconds break)
-#    print("There can also be a break in the same line", end=' ', flush=True)
-#    sleep(2.0)
-#    print("like this!")
-#    sleep(1.0)
 
     # You can add options for the player to choose from like this:
     next_scene = choose_option([
@@ -65,7 +60,7 @@ def tree_scene():
 		('Switch to looking for a cave', cave_scene)
 	])
 
-	return next_scene
+    return next_scene
 
 # -----------------------------------------------
 
