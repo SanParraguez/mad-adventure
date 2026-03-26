@@ -33,6 +33,7 @@ def main():
     game_scenes = random.sample(SCENES_POOL, max_scenes)
 
     # Initialize game
+    lives_counter = 3
     wake_up_scene()
     current_scene = game_scenes.pop(0)
 
@@ -41,6 +42,19 @@ def main():
     while counter < max_scenes:
 
         current_scene = current_scene()
+
+        if current_scene is False:
+            lives_counter -= 1
+            print("\nLife is fleeting...")
+            if lives_counter < 1:
+                sleep(1.0)
+                print("\n...")
+                sleep(1.0)
+                print("\n...")
+                sleep(1.0)
+                print("\nTurns out that killed you.")
+                break
+            current_scene = None
 
         if current_scene is None and len(game_scenes) == 0:
             sleep(2.0)
@@ -60,10 +74,6 @@ def main():
 
         elif current_scene is True:
             print(f"\nCongratulations, you won!")
-            break
-
-        elif current_scene is False:
-            print(f"\nYou lost, maybe next time.")
             break
 
     sleep(1.0)
