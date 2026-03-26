@@ -46,7 +46,10 @@ def tree_scene():
         sleep(1.0)
 	print(f"\nAs you begin to make your bedroll, you hear a small noise...")
 
-	next_scene = squirrel_scene
+	next_scene = choose_option([
+ 		('Investigate the sound', squirrel_scene)
+		('Ignore the sound', monster_scene)
+	])
 
         return next_scene
         # When you are ready to end the scene, return:
@@ -102,3 +105,11 @@ def monster_scene():
     print(f"\nWhat did I do wrong?")
 
     return False
+
+# -----------------------------------------------
+
+def squirrel_scene():
+
+    print(f"\nFollowing the noise, you find a small, cute wounded squirrel")
+
+    return True # For now just to debug
