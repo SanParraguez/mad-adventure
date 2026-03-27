@@ -23,3 +23,4 @@ from . import dragon_footprints
 from . import scarf
 from . import gathering_berries
 from . import fountain_scene
+from . import wounded_squirrel_scene
