@@ -17,6 +17,7 @@ from . import flower_seller
 from . import forest_gnomes
 from . import very_cool_stick
 from . import fun_mushrooms
+from . import wounded_squirrel
 from . import dark_forest
 from . import castle
 from . import dragon_footprints
